@@ -40,10 +40,7 @@ Rails.application.routes.draw do
 
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
-<<<<<<< HEAD
   get '/logout', to: "sessions#destroy"
-=======
->>>>>>> 366f2cc589fddab75110fb80dc23829403131368
 
   get "/", to: "welcome#index"
 end
