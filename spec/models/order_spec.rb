@@ -7,6 +7,9 @@ describe Order, type: :model do
     it { should validate_presence_of :city }
     it { should validate_presence_of :state }
     it { should validate_presence_of :zip }
+
+    it { should have_many :user_orders}
+    it { should have_many(:users).through(:user_orders)}
   end
 
   describe "relationships" do
