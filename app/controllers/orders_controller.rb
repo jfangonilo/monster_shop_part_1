@@ -11,6 +11,7 @@ class OrdersController <ApplicationController
   def create
     order = Order.create(order_params)
     if order.save
+      UserOrder.create(user_id:session[:user_id], order_id: order.id)
       cart.items.each do |item,quantity|
         order.item_orders.create({
           item: item,
