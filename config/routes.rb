@@ -51,7 +51,8 @@ Rails.application.routes.draw do
   get '/logout', to: "sessions#destroy"
 
   get "/", to: "welcome#index"
-
+ 
+  get "/profile/orders", to: "users#show"
   get "/profile/edit", to: "users#edit"
   patch "/profile/edit", to: "users#update"
 end
