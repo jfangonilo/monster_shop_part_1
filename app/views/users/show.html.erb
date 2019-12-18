@@ -6,4 +6,8 @@
 <h3>State: <%= @user.state %></h3>
 <h3>Zip: <%= @user.zip %></h3>
 <h3>Email: <%= @user.email %></h3>
-<%= link_to "Edit Your Profile", "/profile/edit" %>
+<%= link_to "Edit Your Profile", "/profile/edit" %><br>
+<% if !@user.order_ids.empty? %>
+<%= link_to "My Orders", "/profile/orders" %>
+<% end %>
+
